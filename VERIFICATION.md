@@ -28,7 +28,7 @@ The updated changelog includes 15 releases and 83 notes per language. Previous a
 
 This remains **Beta**. FC 27 quest progress, badge counts and credited hours remain unresolved/unverified; local timers are not Discord progress. Separate Early Access role IDs and preview links remain unconfigured. Membership verification needs internet access; role changes apply when checked, with a cached grant lasting at most two minutes.
 
-No bot/backend or automatic joining is included. The permanent invite is https://discord.gg/27jXU6C4Qg. OAuth guilds.join consent alone does not add a member; Add Guild Member also needs the same application's bot token: https://docs.discord.com/developers/resources/guild#add-guild-member . A bot token is not distributed with the EXE.
+No bot/backend or automatic joining is included. The permanent invite is https://discord.gg/ERzQaHgPeV. OAuth guilds.join consent alone does not add a member; Add Guild Member also needs the same application's bot token: https://docs.discord.com/developers/resources/guild#add-guild-member . A bot token is not distributed with the EXE.
 
 The binary is unsigned and not obfuscated. Local membership checks and locks cannot prevent copying or patching. Updates are manual; voluntary PayPal support does not assign roles automatically.
 

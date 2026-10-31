@@ -15,6 +15,6 @@
 | Updates | Manual download and replacement; no automatic updater. |
 | Display/accessibility | English/Czech normal/minimum views were inspected. Live 150%/200% display scaling and screen-reader testing remain outstanding. |
 
-The permanent invite is https://discord.gg/27jXU6C4Qg. Its guild and no-expiration response were checked on 30 October 2026. An owner can still revoke an invite later.
+The permanent invite is https://discord.gg/ERzQaHgPeV. Its guild and no-expiration response were checked on 30 October 2026. An owner can still revoke an invite later.
 
 Several simultaneous sessions do not necessarily multiply Discord credit. A profile name shown in Discord also does not prove eligibility for a quest or badge. Do not report local time as a confirmed reward.

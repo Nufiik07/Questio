@@ -1,6 +1,6 @@
 # Support
 
-Use the GitHub bug form for reproducible app problems, or join [Questio Discord](https://discord.gg/27jXU6C4Qg).
+Use the GitHub bug form for reproducible app problems, or join [Questio Discord](https://discord.gg/ERzQaHgPeV).
 
 Include app version, Windows version, exact steps and what happened. Separate the app's local timer from progress shown in Discord. Do not post passwords, OAuth tokens, session.dpapi, owner-workspace.dpapi or an AppData archive.
 

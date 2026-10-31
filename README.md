@@ -6,7 +6,7 @@ A free Windows desktop app for browsing game profiles and managing **local activ
 
 **Created by Tecka.exe and Nouně · Supported by NodeVault and NF Scripts**
 
-[Download releases](../../releases) · [Join Discord](https://discord.gg/27jXU6C4Qg) · [Česky](docs/README.cs.md) · [Known limitations](KNOWN_ISSUES.md)
+[Download releases](../../releases) · [Join Discord](https://discord.gg/ERzQaHgPeV) · [Česky](docs/README.cs.md) · [Known limitations](KNOWN_ISSUES.md)
 
 ![Questio desktop library](assets/library.png)
 
@@ -15,7 +15,7 @@ A free Windows desktop app for browsing game profiles and managing **local activ
 1. Open **Releases** and download `Questio-3.2-Beta-Windows.zip`. GitHub's automatic **Source code** archives contain this documentation, not the application.
 2. Extract the ZIP to a writable folder. Run `Questio.exe` as your normal Windows user; administrator access is not required.
 3. Sign in on the official Discord page. Questio requests your profile and membership/role information for its community.
-4. If needed, join the [community](https://discord.gg/27jXU6C4Qg), complete its membership screening and choose **Check membership**.
+4. If needed, join the [community](https://discord.gg/ERzQaHgPeV), complete its membership screening and choose **Check membership**.
 5. Choose profiles, duration and concurrency. Stop all sessions from the queue or close Questio.
 
 Requires Windows with .NET Framework 4.8 and internet access for Discord sign-in/membership checks. The release is portable and currently unsigned. The packaged verification report describes actual testing; a clean second-PC test has not yet been recorded.

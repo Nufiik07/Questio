@@ -7,7 +7,7 @@ Bezplatná aplikace pro Windows s knihovnou herních profilů, místními relace
 1. V sekci **Releases** stáhni `Questio-3.2-Beta-Windows.zip`. Automatický archiv Source code obsahuje dokumentaci, nikoliv EXE.
 2. Rozbal ZIP a spusť `Questio.exe` pod běžným účtem Windows. Je potřeba .NET Framework 4.8 a internet.
 3. Přihlas se přes oficiální stránku Discordu. Aplikace čte profil a členské role, ne zprávy nebo heslo.
-4. Připoj se na [Discord Questio](https://discord.gg/27jXU6C4Qg), dokonči případná pravidla a stiskni Ověřit členství.
+4. Připoj se na [Discord Questio](https://discord.gg/ERzQaHgPeV), dokonči případná pravidla a stiskni Ověřit členství.
 5. Vyber profily, délku a souběžnost. Relace zastavíš tlačítkem Zastavit vše nebo zavřením aplikace.
 
 EN/CZ přepneš nahoře. Každý člen má aplikaci zdarma. [Podpora přes PayPal](https://paypal.me/NouneNunu) je dobrovolná a automaticky nepřiděluje roli.
