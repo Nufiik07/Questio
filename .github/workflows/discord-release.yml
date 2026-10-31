@@ -1,0 +1,217 @@
+name: Announce release on Discord
+
+on:
+  release:
+    types: [published]
+
+permissions: {}
+
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Post the published release to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_UPDATES_ROLE_ID: ${{ vars.DISCORD_UPDATES_ROLE_ID }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          import sys
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+
+
+          class NotificationError(Exception):
+              """Contains only messages safe to show in a public Actions log."""
+
+
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, request, response, code, message, headers, new_url):
+                  return None
+
+
+          def text(value):
+              if not isinstance(value, str):
+                  return ""
+              # Normalize malformed surrogate escapes before UTF-8 JSON encoding.
+              value = value.encode("utf-8", errors="replace").decode("utf-8")
+              return "".join(c for c in value if c in "\n\t" or ord(c) >= 32)
+
+
+          def crop(value, limit):
+              value = text(value)
+              encoded = value.encode("utf-16-le")
+              if len(encoded) <= limit * 2:
+                  return value
+              return encoded[: (limit - 1) * 2].decode("utf-16-le", errors="ignore") + "…"
+
+
+          def webhook_endpoint(raw_url):
+              raw_url = raw_url.strip()
+              if not raw_url:
+                  raise NotificationError(
+                      "Missing DISCORD_WEBHOOK_URL. Add it under repository Settings > "
+                      "Secrets and variables > Actions > Secrets before publishing a release."
+                  )
+              message = "DISCORD_WEBHOOK_URL must be a valid Discord HTTPS channel webhook URL."
+              if any(ord(c) < 32 for c in raw_url):
+                  raise NotificationError(message)
+              try:
+                  parsed = urllib.parse.urlsplit(raw_url)
+                  valid = (
+                      parsed.scheme == "https"
+                      and parsed.hostname in {"discord.com", "canary.discord.com", "ptb.discord.com"}
+                      and parsed.port in {None, 443}
+                      and parsed.username is None
+                      and parsed.password is None
+                      and not parsed.fragment
+                      and re.fullmatch(
+                          r"/api(?:/v[0-9]+)?/webhooks/[0-9]{17,20}/[A-Za-z0-9._-]{20,200}/?",
+                          parsed.path,
+                      )
+                  )
+                  query = urllib.parse.parse_qs(parsed.query, strict_parsing=True)
+                  # This workflow targets a regular channel, not a forum thread.
+                  valid = valid and set(query).issubset({"wait"})
+              except (ValueError, TypeError):
+                  valid = False
+              if not valid:
+                  raise NotificationError(message)
+              return urllib.parse.urlunsplit(
+                  ("https", parsed.netloc, parsed.path.rstrip("/"), "wait=true", "")
+              )
+
+
+          def role_id(raw_role):
+              value = raw_role.strip()
+              if value and not re.fullmatch(r"[0-9]{17,20}", value):
+                  raise NotificationError(
+                      "DISCORD_UPDATES_ROLE_ID must contain only the numeric role ID "
+                      "(17 to 20 digits), or be left unset for no role mention."
+                  )
+              return value
+
+
+          def release_link(release):
+              value = text(release.get("html_url"))
+              message = "The release event does not contain a valid GitHub release link."
+              try:
+                  parsed = urllib.parse.urlsplit(value)
+                  valid = (
+                      parsed.scheme == "https"
+                      and parsed.hostname == "github.com"
+                      and parsed.port in {None, 443}
+                      and parsed.username is None
+                      and parsed.password is None
+                      and not parsed.query
+                      and not parsed.fragment
+                      and re.fullmatch(r"/[^/]+/[^/]+/releases/tag/[^\s]+", parsed.path)
+                      and len(value) <= 2048
+                  )
+              except (ValueError, TypeError):
+                  valid = False
+              if not valid:
+                  raise NotificationError(message)
+              return value
+
+
+          def payload_for(release, updates_role):
+              tag = crop(release.get("tag_name"), 100)
+              title = crop(release.get("name") or tag or "Questio release", 256)
+              notes = text(release.get("body")).strip()
+              notes = crop(notes or "Open the release for download details and changes.", 3500)
+              # Release prose remains embed text; only the explicitly configured role may ping.
+              payload = {
+                  "username": "Questio Updates",
+                  "allowed_mentions": {"parse": [], "roles": [updates_role] if updates_role else []},
+                  "embeds": [{
+                      "title": title,
+                      "url": release_link(release),
+                      "description": notes,
+                      "color": 0xD16BFF,
+                      "fields": [
+                          {"name": "Version", "value": tag or "See release", "inline": True},
+                          {
+                              "name": "Channel",
+                              "value": "Beta / pre-release" if release.get("prerelease") is True else "Stable release",
+                              "inline": True,
+                          },
+                      ],
+                      "footer": {"text": "Questio · Open the release title for downloads and full notes"},
+                  }],
+              }
+              if updates_role:
+                  payload["content"] = "<@&" + updates_role + ">"
+              return payload
+
+
+          def main():
+              try:
+                  with open(os.environ["GITHUB_EVENT_PATH"], "r", encoding="utf-8") as event_file:
+                      event = json.load(event_file)
+              except (OSError, KeyError, ValueError):
+                  raise NotificationError("Could not read the GitHub release event.") from None
+              if not isinstance(event, dict):
+                  raise NotificationError("The GitHub release event has an invalid format.")
+              release = event.get("release")
+              if (
+                  os.environ.get("GITHUB_EVENT_NAME") != "release"
+                  or event.get("action") != "published"
+                  or not isinstance(release, dict)
+                  or release.get("draft") is not False
+              ):
+                  print("Skipped: this is not a published, non-draft release event.")
+                  return
+              endpoint = webhook_endpoint(os.environ.get("DISCORD_WEBHOOK_URL", ""))
+              updates_role = role_id(os.environ.get("DISCORD_UPDATES_ROLE_ID", ""))
+              payload = payload_for(release, updates_role)
+              request = urllib.request.Request(
+                  endpoint,
+                  data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+                  headers={"Content-Type": "application/json", "User-Agent": "Questio-Release-Announcement/1.0"},
+                  method="POST",
+              )
+              # Exactly one attempt. Never retry an ambiguous delivery automatically.
+              opener = urllib.request.build_opener(NoRedirect())
+              try:
+                  with opener.open(request, timeout=20) as response:
+                      if not 200 <= response.status < 300:
+                          raise NotificationError(
+                              "Discord did not confirm delivery. Check the channel before rerunning; "
+                              "a rerun may post the notification again."
+                          )
+              except urllib.error.HTTPError as error:
+                  if error.code == 429:
+                      message = "Discord rate-limited the request. No automatic retry was made."
+                  elif error.code in {401, 403, 404}:
+                      message = "Discord rejected the webhook. Check its existence and channel access."
+                  else:
+                      message = "Discord returned an HTTP error. Check the webhook and release contents."
+                  raise NotificationError(
+                      message + " Check the channel before rerunning; a rerun may post again."
+                  ) from None
+              except (urllib.error.URLError, TimeoutError, OSError):
+                  raise NotificationError(
+                      "Discord delivery could not be confirmed. No automatic retry was made. "
+                      "Check the channel before rerunning; a rerun may post again."
+                  ) from None
+              print("Discord release notification delivered.")
+
+
+          if __name__ == "__main__":
+              try:
+                  main()
+              except NotificationError as error:
+                  print("::error::" + str(error))
+                  sys.exit(1)
+              except Exception:
+                  # Do not expose request URLs, response bodies, or exception tracebacks.
+                  print("::error::Unexpected notification failure. Check the channel before rerunning.")
+                  sys.exit(1)
+          PY

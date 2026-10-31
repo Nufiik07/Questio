@@ -1,0 +1,46 @@
+name: Bug report / Chyba
+description: Report a reproducible Questio problem.
+title: '[Bug] '
+body:
+  - type: markdown
+    attributes:
+      value: 'Check KNOWN_ISSUES.md first. Never attach tokens, passwords or your AppData folder. Local timers are not Discord progress.'
+  - type: input
+    id: version
+    attributes:
+      label: Questio version
+      placeholder: 3.2 Beta
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and display scaling
+      placeholder: Windows 11, 150%
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / Postup
+      description: What did you click or select?
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result / Očekávaný a skutečný výsledek
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Optional diagnostics
+      description: Settings → Export diagnostics. Review the file before attaching it; do not include credentials or AppData.
+  - type: checkboxes
+    id: reviewed
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked the known limitations and removed private information from this report.
+          required: true
