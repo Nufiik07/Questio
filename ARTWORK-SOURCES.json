@@ -1,0 +1,542 @@
+[
+  {
+    "Id": "1124352124097155164",
+    "Name": "A Plague Tale: Innocence",
+    "Source": "https://cdn.discordapp.com/app-icons/1124352124097155164/5c908e24bac0363bc47fe614a8228a70.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124352339055231137",
+    "Name": "Baldur's Gate II: Enhanced Edition",
+    "Source": "https://cdn.discordapp.com/app-icons/1124352339055231137/5fa024a16d91f5c95718ba0c9004706d.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124351730323308675",
+    "Name": "Cult of the Lamb",
+    "Source": "https://cdn.discordapp.com/app-icons/1124351730323308675/06302d1975cc4729b404e1f712c830d2.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124351771133886615",
+    "Name": "Borderlands: Game of the Year Enhanced",
+    "Source": "https://cdn.discordapp.com/app-icons/1124351771133886615/e332579189c2fd3ff9d2e9dccaf10efc.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124353098417193031",
+    "Name": "Assassin's Creed III Remastered",
+    "Source": "https://cdn.discordapp.com/app-icons/1124353098417193031/0ffd4ad5bc49971173ddecb7ac000a90.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124354276127428728",
+    "Name": "Resident Evil Village: Gold Edition",
+    "Source": "https://cdn.discordapp.com/app-icons/1124354276127428728/3919f0905b5c897169f39bd35325c23d.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124352914157220000",
+    "Name": "A Short Hike",
+    "Source": "https://cdn.discordapp.com/app-icons/1124352914157220000/8d91886b33eea3b9f681266cd80a5ad0.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124353293301330070",
+    "Name": "Resident Evil 7: Biohazard",
+    "Source": "https://cdn.discordapp.com/app-icons/1124353293301330070/3363075de6aee643ce1cde3a06600ba8.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124354380813058048",
+    "Name": "Batman: The Telltale Series",
+    "Source": "https://cdn.discordapp.com/app-icons/1124354380813058048/4318500715628fcd9d1d8af0a1be91b0.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124355718376607845",
+    "Name": "Batman: The Enemy Within",
+    "Source": "https://cdn.discordapp.com/app-icons/1124355718376607845/6c1b1044e5c6ed069c81e6488011c4e8.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124355056964219010",
+    "Name": "A Plague Tale: Requiem",
+    "Source": "https://cdn.discordapp.com/app-icons/1124355056964219010/64ad11044ccc3d7e8a8c4f05cd1a5b1b.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124354731423322112",
+    "Name": "Resident Evil Resistance",
+    "Source": "https://cdn.discordapp.com/app-icons/1124354731423322112/48be95ba4a4043527ba7aaffb432bdc0.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124358466614612169",
+    "Name": "Resident Evil Re:Verse",
+    "Source": "https://cdn.discordapp.com/app-icons/1124358466614612169/91a6e3c029a3cc66083b47edbca43535.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124357030610743306",
+    "Name": "Borderlands 2 VR",
+    "Source": "https://cdn.discordapp.com/app-icons/1124357030610743306/27e30a2d1fa94efd0246ee289bd8595f.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124359404515504248",
+    "Name": "Baldur's Gate: Dark Alliance",
+    "Source": "https://cdn.discordapp.com/app-icons/1124359404515504248/1bac53c9a5feaaa056d92621e5c86973.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1129504209226711190",
+    "Name": "Resident Evil 4",
+    "Source": "https://cdn.discordapp.com/app-icons/1129504209226711190/2474521a3928dfb64c189e8f20ce9940.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1124358738774601899",
+    "Name": "Resident Evil 2",
+    "Source": "https://cdn.discordapp.com/app-icons/1124358738774601899/8ebda0e23ba9332062efc8410c226fed.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1129504165727584307",
+    "Name": "Resident Evil 2",
+    "Source": "https://cdn.discordapp.com/app-icons/1129504165727584307/2d7dc616c440d16beb3c97487179474f.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1129504219423068241",
+    "Name": "Resident Evil 4 Chainsaw Demo",
+    "Source": "https://cdn.discordapp.com/app-icons/1129504219423068241/1e3b836a49af724d93bd6180a4b525ad.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1129504702879518821",
+    "Name": "Resident Evil 0",
+    "Source": "https://cdn.discordapp.com/app-icons/1129504702879518821/0f3a38089fcdcaf716df26caaa030212.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1129505257177763943",
+    "Name": "Resident Evil: Operation Raccoon City",
+    "Source": "https://cdn.discordapp.com/app-icons/1129505257177763943/b90efc4498e6830db85d8566232e46bd.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1137125502985961543",
+    "Name": "Baldur's Gate III",
+    "Source": "https://cdn.discordapp.com/app-icons/1137125502985961543/260a579965ab403c0a54d9260892caa5.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1162153766859059241",
+    "Name": "Resident Evil Village",
+    "Source": "https://cdn.discordapp.com/app-icons/1162153766859059241/04e433fe4a3d50cf2a2c90c300702ce1.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1146138865673982022",
+    "Name": "Armored Core VI: Fires of Rubicon",
+    "Source": "https://cdn.discordapp.com/app-icons/1146138865673982022/55ef4e5d455946a76a671a01f07ff72b.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1163197033901998190",
+    "Name": "Assassin's Creed Mirage",
+    "Source": "https://cdn.discordapp.com/app-icons/1163197033901998190/e6c21495883de3b133de98cd154746d1.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1196883977944956962",
+    "Name": "Resident Evil 3",
+    "Source": "https://cdn.discordapp.com/app-icons/1196883977944956962/57f16fa0926db72f2a9cb2ea95114421.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1182864211353809016",
+    "Name": "COCOON",
+    "Source": "https://cdn.discordapp.com/app-icons/1182864211353809016/fe8e96bd7b0532cfa2ba7fff9c65ca42.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1260340082150346932",
+    "Name": "Once Human",
+    "Source": "https://cdn.discordapp.com/app-icons/1260340082150346932/18535f5756286c51c7ba28b12d70fb13.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1352114489314639882",
+    "Name": "Assassin's Creed Shadows",
+    "Source": "https://cdn.discordapp.com/app-icons/1352114489314639882/c12ab664f7730c469b2071728afbd34b.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1402416610962309140",
+    "Name": "Bastion",
+    "Source": "https://cdn.discordapp.com/app-icons/1402416610962309140/141da7961ac996f8fec557e05b01478f.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1402416659771424808",
+    "Name": "Borderlands",
+    "Source": "https://cdn.discordapp.com/app-icons/1402416659771424808/70464e372501cea871216cff329601fd.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1402416901551816837",
+    "Name": "Celeste",
+    "Source": "https://cdn.discordapp.com/app-icons/1402416901551816837/30f9def7591be70a86d57946c4d80a46.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1402416669384511498",
+    "Name": "Assassin's Creed III",
+    "Source": "https://cdn.discordapp.com/app-icons/1402416669384511498/4252472de639885bd8c9e004261d2eeb.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1402416704507875480",
+    "Name": "Assassin's Creed II",
+    "Source": "https://cdn.discordapp.com/app-icons/1402416704507875480/ced699632bbe7722637e4513ab9105c8.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1402416702695673906",
+    "Name": "Assassin's Creed: Director's Cut Edition",
+    "Source": "https://cdn.discordapp.com/app-icons/1402416702695673906/1c74ca338d7a531745fc91ef11562378.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1402417032258916553",
+    "Name": "Control",
+    "Source": "https://cdn.discordapp.com/app-icons/1402417032258916553/da595947c4db7334c860c8aca5a83d09.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1403362274634240151",
+    "Name": "cyberpunkdreams",
+    "Source": "https://cdn.discordapp.com/app-icons/1403362274634240151/e56682b2003969fd321884365ba913ef.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": null,
+    "Name": null,
+    "Source": "https://cdn.discordapp.com/app-icons/1402418366488248361/04fdd3a25f188007d5839b34482b9964.png?size=512",
+    "Ok": false
+  },
+  {
+    "Id": "1402417030921191464",
+    "Name": "Baba Is You",
+    "Source": "https://cdn.discordapp.com/app-icons/1402417030921191464/b464454bb940617bbbf1e09f222f8332.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1415390815056035891",
+    "Name": "Borderlands 4",
+    "Source": "https://cdn.discordapp.com/app-icons/1415390815056035891/d0b6247195dcd9522b63662bc6623c7e.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1440131139233775788",
+    "Name": "Resident Evil: Director's Cut",
+    "Source": "https://cdn.discordapp.com/app-icons/1440131139233775788/d387c7ada978b9c074354d4411fe309b.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1440143043427565681",
+    "Name": "Resident Evil 3: Nemesis",
+    "Source": "https://cdn.discordapp.com/app-icons/1440143043427565681/3c53981d99544afffa1e680d783e5da8.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1437509662303059998",
+    "Name": "Where Winds Meet",
+    "Source": "https://cdn.discordapp.com/app-icons/1437509662303059998/14adf4179a6f1f7d6c5f0bd2f925d030.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1456485028350656512",
+    "Name": "Resident Evil Requiem",
+    "Source": "https://cdn.discordapp.com/app-icons/1456485028350656512/525e004b0f3a5e19b5b7495df5386e49.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1442727969830207508",
+    "Name": "Resident Evil: Origins Collection",
+    "Source": "https://cdn.discordapp.com/app-icons/1442727969830207508/88fa6b5043ee1088ad09d2a755dfebf9.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1531874756096295054",
+    "Name": "EA Sports FC 27",
+    "Source": "https://cdn.discordapp.com/app-icons/1531874756096295054/b9e00e9b011da7dc6f955601593a6ad2.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1445177238525050950",
+    "Name": "Resident Evil",
+    "Source": "https://cdn.discordapp.com/app-icons/1445177238525050950/299e4d7eca6d7c1071aeb5aac35833a9.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1511443377927880775",
+    "Name": "Call of Duty: Modern Warfare 4",
+    "Source": "https://cdn.discordapp.com/app-icons/1511443377927880775/b84dc72f3c50792e031f4ee8337452ee.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "385538388419280896",
+    "Name": "Assassin's Creed Origins",
+    "Source": "https://cdn.discordapp.com/app-icons/385538388419280896/202200d11005d1109bd1624077c86ae0.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "1562677993157959791",
+    "Name": "Resident Evil 2",
+    "Source": "https://cdn.discordapp.com/app-icons/1562677993157959791/2d7dc616c440d16beb3c97487179474f.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "363430002181668864",
+    "Name": "Cuphead",
+    "Source": "https://cdn.discordapp.com/app-icons/363430002181668864/384c8873f9cbd83424736795770ae24a.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "406645950782636041",
+    "Name": "Borderlands: The Pre-Sequel",
+    "Source": "https://cdn.discordapp.com/app-icons/406645950782636041/e1c19ef9498da5aaad001683ae591df2.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "406645260987662366",
+    "Name": "Broforce",
+    "Source": "https://cdn.discordapp.com/app-icons/406645260987662366/2eaa42a879b0b4378acc1e8d286ffb4d.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "406637677199360030",
+    "Name": "Assassin's Creed IV Black Flag",
+    "Source": "https://cdn.discordapp.com/app-icons/406637677199360030/1c74b8419ceb03f363a55cdf02e6a991.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "421150698168909834",
+    "Name": "Borderlands 2",
+    "Source": "https://cdn.discordapp.com/app-icons/421150698168909834/1aab7ceff08ae271f892eae79bf0c3f2.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425433703041335346",
+    "Name": "Assassin's Creed Chronicles: China",
+    "Source": "https://cdn.discordapp.com/app-icons/425433703041335346/2d98a4030ce0cf770ca35b91977167bc.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425434983080001556",
+    "Name": "Assassin's Creed Rogue",
+    "Source": "https://cdn.discordapp.com/app-icons/425434983080001556/e99b7cdaf17bbd0fbddbae6327209505.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425435152634609664",
+    "Name": "Assassin's Creed Unity",
+    "Source": "https://cdn.discordapp.com/app-icons/425435152634609664/df337ad735fb64014f731fd43477ad49.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425435232788021258",
+    "Name": "Assassin's Creed Brotherhood",
+    "Source": "https://cdn.discordapp.com/app-icons/425435232788021258/78549481f73edcbc01ba1d168ab331fd.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425436928041680931",
+    "Name": "Assassin's Creed Revelations",
+    "Source": "https://cdn.discordapp.com/app-icons/425436928041680931/68d29c26b6d3d6fcff5f33a314fedee1.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425437243822571550",
+    "Name": "Batman: Arkham Origins",
+    "Source": "https://cdn.discordapp.com/app-icons/425437243822571550/217bbeba2a7d10135312054b94339fa1.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425437076188561408",
+    "Name": "Batman: Arkham Knight",
+    "Source": "https://cdn.discordapp.com/app-icons/425437076188561408/462c20c05cd7a21ba88b988046066ced.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425437344758366216",
+    "Name": "Batman: Arkham VR",
+    "Source": "https://cdn.discordapp.com/app-icons/425437344758366216/ebb2b66d0be11c1b0138ea3d9b760974.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425442925967573002",
+    "Name": "BioShock 2",
+    "Source": "https://cdn.discordapp.com/app-icons/425442925967573002/6ddd99a230c59a4e9622bbddafe22951.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425442965255880704",
+    "Name": "BioShock 2 Remastered",
+    "Source": "https://cdn.discordapp.com/app-icons/425442965255880704/ee4560c06ed232fe9fc43de4334fc69d.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425442995681230858",
+    "Name": "BioShock Infinite",
+    "Source": "https://cdn.discordapp.com/app-icons/425442995681230858/9d745a3f74921b11af8e696465f3ae93.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425443045417156618",
+    "Name": "BioShock Remastered",
+    "Source": "https://cdn.discordapp.com/app-icons/425443045417156618/385efe7b7621b6d4e4b02b2ece830a42.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425453860392402964",
+    "Name": "Assassin's Creed: Freedom Cry",
+    "Source": "https://cdn.discordapp.com/app-icons/425453860392402964/4893b35512981fb1a7874ea96894cbac.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425453938582487068",
+    "Name": "Assassin's Creed Syndicate",
+    "Source": "https://cdn.discordapp.com/app-icons/425453938582487068/33c6be1c06d71266a45b85ff12b29203.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425457838731690003",
+    "Name": "Assassin's Creed III: Liberation",
+    "Source": "https://cdn.discordapp.com/app-icons/425457838731690003/09d6ba4f46014a13fa765abc9f133a4e.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425725558626844702",
+    "Name": "Assassin's Creed Chronicles: India",
+    "Source": "https://cdn.discordapp.com/app-icons/425725558626844702/507dd681863af194280c45fa73c0002d.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "443160369192632330",
+    "Name": "Resident Evil 7: Biohazard",
+    "Source": "https://cdn.discordapp.com/app-icons/443160369192632330/82bff419c6a6500a7db2a945ddc23ab9.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "425727574539370529",
+    "Name": "Batman: Arkham Asylum - Game of the Year Edition",
+    "Source": "https://cdn.discordapp.com/app-icons/425727574539370529/0333523b58b0f9bebdf3759187b7fafd.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "451539402896703490",
+    "Name": "Resident Evil 5",
+    "Source": "https://cdn.discordapp.com/app-icons/451539402896703490/48f819dcb638457e753008b26f06976d.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "451539772037398560",
+    "Name": "Resident Evil 4: Ultimate HD Edition",
+    "Source": "https://cdn.discordapp.com/app-icons/451539772037398560/e8b1e09b572dcf7005b19d5531342b0f.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "451540292458512394",
+    "Name": "Resident Evil 6",
+    "Source": "https://cdn.discordapp.com/app-icons/451540292458512394/9bbed8b067511c0be775fc95e0fece65.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "451541064545861632",
+    "Name": "Batman: Arkham City - Game of the Year Edition",
+    "Source": "https://cdn.discordapp.com/app-icons/451541064545861632/ff88e0cf2afc919b3d22ce3712793c4c.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "451543893050261504",
+    "Name": "Alien: Isolation",
+    "Source": "https://cdn.discordapp.com/app-icons/451543893050261504/f440837988b5e2e7c2f6019be2ffcf19.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "455494486089269258",
+    "Name": "Baldur's Gate: Enhanced Edition",
+    "Source": "https://cdn.discordapp.com/app-icons/455494486089269258/cce07928e6c3813bf11a13770771c4b1.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "496526142673649724",
+    "Name": "Alan Wake's American Nightmare",
+    "Source": "https://cdn.discordapp.com/app-icons/496526142673649724/f1b87fa585882a35ea38050ce47865b7.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "489648352892289054",
+    "Name": "Resident Evil: Revelations 2",
+    "Source": "https://cdn.discordapp.com/app-icons/489648352892289054/2ded7b8f1c197e12b364f1236519ef74.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "499004687719202816",
+    "Name": "Resident Evil: Revelations",
+    "Source": "https://cdn.discordapp.com/app-icons/499004687719202816/5f2cb76423b772fcec4d2c12efc1f3bd.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "492113873508368403",
+    "Name": "Abzu",
+    "Source": "https://cdn.discordapp.com/app-icons/492113873508368403/ca26bf489f2b754a18c92a1b134f6c83.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "497898978466070528",
+    "Name": "Assassin's Creed Odyssey",
+    "Source": "https://cdn.discordapp.com/app-icons/497898978466070528/9ef66a635126a1dad1afbdca71bcb08b.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "700136079562375258",
+    "Name": "VALORANT",
+    "Source": "https://cdn.discordapp.com/app-icons/700136079562375258/9c55c3dbef3b1621d17ee32dc7765dcc.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "496540068442537984",
+    "Name": "Braid",
+    "Source": "https://cdn.discordapp.com/app-icons/496540068442537984/839f63112f99288f050270aeb6f19edc.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "500804924007907348",
+    "Name": "Resident Evil",
+    "Source": "https://cdn.discordapp.com/app-icons/500804924007907348/cac50ca685c4bcbdffe722435715a84e.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "504423339104796672",
+    "Name": "Alan Wake",
+    "Source": "https://cdn.discordapp.com/app-icons/504423339104796672/d5ab49e49cb21e0d57f43cfaee3fe1bc.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "775754545778786314",
+    "Name": "Assassin's Creed Valhalla",
+    "Source": "https://cdn.discordapp.com/app-icons/775754545778786314/da1f2aa18032c9064ee3700ce10be588.png?size=512",
+    "Ok": true
+  },
+  {
+    "Id": "787443973538971748",
+    "Name": "Cyberpunk 2077",
+    "Source": "https://cdn.discordapp.com/app-icons/787443973538971748/f4fcdc6c261a90bab370c0368f27c30c.png?size=512",
+    "Ok": true
+  }
+]
