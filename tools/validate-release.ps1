@@ -1,7 +1,7 @@
 param([string]$Root = (Join-Path $PSScriptRoot '..'),[string]$ArtifactPath)
 $ErrorActionPreference = 'Stop'
 $taskRoot = [IO.Path]::GetFullPath($Root).TrimEnd('\','/')
-$taskFiles = @('README.md','docs/README.cs.md','KNOWN_ISSUES.md','PRIVACY.md','SUPPORT.md','SECURITY.md','THIRD_PARTY_NOTICES.md','ARTWORK-SOURCES.json','CHANGELOG.md','VERIFICATION.md','release.json','assets/logo.png','assets/library.png','assets/support.png','.gitignore','.gitattributes','.github/FUNDING.yml','.github/ISSUE_TEMPLATE/config.yml','.github/ISSUE_TEMPLATE/bug_report.yml','.github/workflows/validate.yml','tools/validate-release.ps1')
+$taskFiles = @('README.md','STATUS.md','status.json','assets/status.svg','tools/set-project-status.ps1','docs/README.cs.md','KNOWN_ISSUES.md','PRIVACY.md','SUPPORT.md','SECURITY.md','THIRD_PARTY_NOTICES.md','ARTWORK-SOURCES.json','CHANGELOG.md','VERIFICATION.md','release.json','assets/logo.png','assets/library.png','assets/quests.png','assets/support.png','.gitignore','.gitattributes','.github/FUNDING.yml','.github/ISSUE_TEMPLATE/config.yml','.github/ISSUE_TEMPLATE/bug_report.yml','.github/workflows/validate.yml','.github/workflows/discord-release.yml','tools/validate-release.ps1')
 $taskActual = @(Get-ChildItem -LiteralPath $taskRoot -Recurse -File -Force | ForEach-Object { $_.FullName.Substring($taskRoot.Length+1).Replace('\','/') } | Where-Object { $_ -notlike '.git/*' })
 if (Compare-Object ($taskActual | Sort-Object) ($taskFiles | Sort-Object)) { throw 'Unexpected or missing public files. Never copy the private workspace into this repository.' }
 foreach ($taskName in $taskFiles | Where-Object { $_ -notlike '*.png' }) {
@@ -16,7 +16,14 @@ foreach ($taskName in $taskFiles | Where-Object { $_ -notlike '*.png' }) {
         }
     }
 }
+$status=Get-Content -LiteralPath (Join-Path $taskRoot 'status.json') -Raw | ConvertFrom-Json
+$labels=@{active='Active';maintenance='Maintenance';discontinued='Discontinued'}
+if(!$labels.ContainsKey([string]$status.state) -or $status.label -cne $labels[$status.state] -or $status.reviewed -notmatch '^\d{4}-\d{2}-\d{2}$' -or [string]::IsNullOrWhiteSpace($status.note)){throw 'Invalid project status.'}
+$statusDoc=Get-Content -LiteralPath (Join-Path $taskRoot 'STATUS.md') -Raw
+$statusSvg=Get-Content -LiteralPath (Join-Path $taskRoot 'assets/status.svg') -Raw
+if(!$statusDoc.Contains('**Status:** '+$status.label) -or !$statusDoc.Contains('**Reviewed:** '+$status.reviewed) -or $status.last_updated_utc -notmatch '^\d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC$' -or !$statusDoc.Contains('**Status last updated:** '+$status.last_updated_utc) -or !$statusDoc.Contains($status.note) -or !$statusSvg.Contains('<title>Project status: '+$status.label+'</title>')){throw 'Project status files disagree.'}
 $taskRelease = Get-Content -LiteralPath (Join-Path $taskRoot 'release.json') -Raw | ConvertFrom-Json
+if($taskRelease.last_updated_utc -notmatch '^\d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC$' -or !(Get-Content -LiteralPath (Join-Path $taskRoot 'README.md') -Raw).Contains('**Last updated:** '+$taskRelease.last_updated_utc)){throw 'README must show the package build timestamp.'}
 if ($taskRelease.version -notmatch '^\d+\.\d+\.\d+$' -or $taskRelease.channel -notin @('beta','stable') -or $taskRelease.artifact -notmatch '^Questio-[0-9.]+-(Beta-)?Windows\.zip$' -or $taskRelease.sha256 -notmatch '^[A-Fa-f0-9]{64}$' -or $taskRelease.exe_sha256 -notmatch '^[A-Fa-f0-9]{64}$') { throw 'Invalid release metadata.' }
 if ($taskRelease.source_included -ne $false -or $taskRelease.auto_join -ne $false -or $taskRelease.reward_credit_verified -ne $false) { throw 'Unsupported release claims.' }
 if (!(Get-Content -LiteralPath (Join-Path $taskRoot 'README.md') -Raw).Contains($taskRelease.artifact)) { throw 'README download name does not match release metadata.' }

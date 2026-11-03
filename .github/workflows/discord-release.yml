@@ -17,6 +17,11 @@ jobs:
           DISCORD_UPDATES_ROLE_ID: ${{ vars.DISCORD_UPDATES_ROLE_ID }}
         shell: bash
         run: |
+          if [ -z "${DISCORD_WEBHOOK_URL:-}" ]; then
+            echo "::notice::Discord announcement skipped: no webhook is configured."
+            echo "No Discord announcement sent. Configure DISCORD_WEBHOOK_URL to enable release notifications." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
           python3 - <<'PY'
           import json
           import os

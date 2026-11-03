@@ -2,6 +2,19 @@
 
 All released versions, newest first. Historical entries describe the app at that release; later entries may replace earlier behavior. Discord recognition, quests and badge credit remain unverified.
 
+## 4.0 Beta — 2026-11-03
+
+Installed games, achievements and Steam cards
+
+- Start on Quests and check local Steam and Epic installations in the background. Filter the saved presets by installation status and see the matched edition. Open Discord for personal offers, progress and rewards.
+- Added an optional Discord restart at startup with a countdown and Skip. Questio verifies the registered client and requests a normal exit. If closing the window would minimize it, Questio can ask Windows Restart Manager to close only the verified Discord process, without forcing it to stop.
+- Added a read-only Steam achievements view for public profiles and supported games. Unavailable and partial results stay separate from earned and unearned achievements.
+- Added Epic My Achievements guidance and local personal lists with preview and explicit save. Records are separated by Discord account, Epic profile and game.
+- Added Steam cards: open your badge page and launch a verified installed Steam game on click. Remaining drops are shown by Steam; Questio does not farm cards or award them.
+- Updated the community invitation and English/Czech guides. Existing account permissions, local session selections and admin locks remain compatible.
+- Added owned-game lists independent of installation: visible Steam libraries and Valve JSON, plus local imports of Epic titles from Legendary. Select a game to inspect its achievements.
+- Added Slovak, German and Spanish throughout the app and release history.
+
 ## 3.2 Beta — 2026-10-30
 
 Community roles and admin access
@@ -163,6 +176,19 @@ The original Windows simulator
 # Přehled změn — čeština
 
 Všechny vydané verze od nejnovější. Starší záznamy popisují aplikaci v době vydání; novější změny mohou dřívější chování nahradit. Rozpoznání Discordem, questy a započítání odznaků zůstávají neověřené.
+
+## 4.0 Beta — 2026-11-03
+
+Nainstalované hry, achievementy a Steam kartičky
+
+- Po přihlášení se otevřou Questy a na pozadí se zkontrolují místní instalace ze Steamu a Epicu. Uložené předvolby lze filtrovat podle stavu instalace a zobrazit odpovídající edici. Osobní nabídky, postup a odměny zůstávají na Discordu.
+- Přidán volitelný restart Discordu při spuštění s odpočtem a možností přeskočení. Questio ověří registrovaného klienta a požádá o běžné ukončení. Pokud by se okno pouze minimalizovalo, může požádat Správce restartování Windows o ukončení pouze ověřeného procesu Discordu bez vynucení.
+- Přidán přehled Steam achievementů pro veřejné profily a podporované hry. Nedostupné nebo částečné výsledky zůstávají oddělené od získaných a nezískaných achievementů.
+- Přidán návod pro Epic My Achievements a vlastní místní seznamy s náhledem a výslovným uložením. Záznamy jsou oddělené podle účtu Discord, profilu Epic a hry.
+- Přidány Steam kartičky: otevři stránku svých odznaků nebo kliknutím spusť ověřenou nainstalovanou hru. Zbývající kartičky ukazuje Steam; Questio je automaticky nefarmí ani nepřiděluje.
+- Aktualizována pozvánka do komunity a české/anglické návody. Stávající oprávnění účtů, výběr relací a zámky správy zůstávají kompatibilní.
+- Přidány seznamy vlastněných her nezávislé na instalaci: viditelná knihovna Steamu a Valve JSON, pro Epic místní import z Legendary. Vybráním hry otevřeš její achievementy.
+- Přidána slovenština, němčina a španělština do aplikace i přehledu změn.
 
 ## 3.2 Beta — 2026-10-30
 

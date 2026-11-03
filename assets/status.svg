@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="204" height="28" role="img" aria-label="Project status: Active">
+  <title>Project status: Active</title>
+  <rect x=".5" y=".5" width="203" height="27" rx="7" fill="#11162f" stroke="#394263"/>
+  <path d="m9 14 4 4 8-9" fill="none" stroke="#65E8B5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="27" y="18.5" fill="#d6daed" font-family="Segoe UI,Arial,sans-serif" font-size="12">Project status</text>
+  <text x="112" y="18.5" fill="#65E8B5" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="bold">Active</text>
+</svg>

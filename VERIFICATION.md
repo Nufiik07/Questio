@@ -1,37 +1,25 @@
-# Questio 3.2 Beta — verification
+# Questio 4.0 Beta — verification
 
-30 October 2026. Windows / .NET Framework 4.8. Executable version 3.2.0.0.
+3 November 2026. Windows desktop, .NET Framework 4.8, executable version 4.0.0.0.
 
-## Changes
+## What was checked
 
-Configured the creator-supplied Owner, Developer, Supporter and Basic role IDs for the existing community. The confirmed Owner account remains pinned. Owner and Developer members can open Admin workspace; Basic, Supporter and Early Access alone cannot. Every verified member retains free Basic features, with or without the named member role.
+**600 local checks passed:** 291 startup, inventory and collection checks; 168 WPF checks; 88 community checks; 26 process/queue checks; 27 Steam profile checks. All tests ran on a fresh build. The verification script records the executable hash and checks that its build inputs did not change during testing.
 
-Administration checks require a current membership grant for the same Discord identity. Local phrase locks are isolated by Discord account and protected by Windows DPAPI. The confirmed Owner keeps the legacy file and encryption entropy. New accounts use separate files and identity-specific entropy. No common password, bot token or client secret is embedded. Public configuration exports now retain Owner and Basic mappings.
+The automated startup suite uses simulated clients and hidden test windows; it does not open or close Discord. A separate Windows GUI fixture accepted a cooperative Restart Manager request, and a second fixture refused it and remained running. No forced shutdown flag is used. The verified production controller requested a normal exit of the running signed Discord client and observed its processes exit. It then reopened the same signed client and observed the continuing process and its Electron child on this Windows PC.
 
-The UI reconciles role changes after membership checks from sign-in/refresh, polling and session starts. Role changes relock the panel and update navigation. Export checks identity and authorization both before and after the save dialog. English/Czech labels and privacy/help text reflect the new behavior.
+Steam inventory fixtures cover exact game identity, missing drives, outdated libraries, files that moved, incomplete manifests, redirected folders, and the old FC 27 helper. Only a click launches a real game through Steam; the app rechecks the current registered library first. A read-only scan on this PC also recognized actual Steam installations. An installation is not proof of ownership, card eligibility or Discord reward progress.
 
-## Verification
+The public Steam Community example for Left 4 Dead returned 38 earned and 35 unearned achievements both by its stats slug and App ID 500. Unknown, private and partial responses are not treated as all achievements missing. Numeric redirects are restricted and the original profile/game are verified. Steam library API requests were tested against controlled responses, not a real personal key. Epic library support was tested against Legendary-format JSON, not a live Epic account. Local Epic records are isolated by Discord account, Epic profile and game, including imported games with duplicate display names.
 
-Fresh build and all suites passed: **88 CommunityTests + 152 DesktopTests + 26 CoreTests + 23 SteamProfileTests = 289 checks**. verify-3.2.ps1 records the exact tested executable hash; package-3.2.ps1 requires the matching build and successful suite logs.
+The language validator checks 520 text keys in each of the Slovak, German and Spanish packs, including placeholders, URLs and line breaks. The UI and in-app changelog switch languages; the packaged written guides are English and Czech. Minimum-size quest/card/achievement captures and Spanish text wrapping were inspected. Public screenshots use a demonstration profile and fixture game installation. Membership and role enforcement remain covered by controlled tests; there was no new live role grant/revocation test in this release.
 
-Role tests cover configured and unknown roles, pending membership, role removal, grant expiry, mismatched identities, independent phrase files, correct phrases without permission, legacy Owner compatibility and configuration round trips. WPF checks cover admin navigation/lock/settings, account changes, revoked/restored roles and English/Czech minimum-size views.
+## Release
 
-The initial Owner-role test failed before implementation. Independent code review found a missing relock when session-start verification consumed a role change before polling. A regression through the actual session-start/authentication caller reproduced stale admin navigation, then passed after shared role reconciliation. Initial attempts at that new test had fixture lifetime and dispatcher-context errors; the corrected harness dispatches the UI action normally and injects the session after startup restoration. Those setup errors are not counted as product results.
+The Windows ZIP contains ten allowlisted entries: the application, English/Czech guides, privacy, changelog, this report, checksum, known issues and artwork notices/sources. The separate checksum identifies the download ZIP. The public distribution repository contains only public documentation, metadata, screenshots, support templates and validation/notification workflows. App source, private notes, credentials, local Epic lists and test helpers are excluded. The Discord announcement workflow skips with a visible notice when no webhook is configured.
 
-Existing OAuth lifecycle, local process/queue, Steam-file ownership/cleanup, diagnostics, localization and avatar checks remain included. Test transport supplies controlled Discord responses; no live role assignment/removal, new live sign-in, second-PC, screen-reader, high-DPI or reward-credit result is claimed. The earlier live pinned Owner test was in version 3.0.
+## Limits
 
-## Distribution and limits
+Portable unsigned beta, manual updates. Clean second-PC setup, live high-DPI and screen-reader testing remain outstanding. Quest presets are historical and personal status stays in Discord. Epic accounts are not universally live-synced. No platform achievement unlock, card farming, automatic server join or protection from platform enforcement is claimed. Local timers are not evidence of credited hours/quests/badges. The current invite was checked for the configured guild on 3 November 2026: https://discord.gg/ERzQaHgPeV.
 
-The public repository has documentation, issue/support templates, attribution, mock-profile screenshots and a read-only validation workflow. Application source, private owner notes, test helpers and account files remain private. The Windows ZIP has ten allowlisted entries and executable/download hashes. GitHub Source code archives of the public repository contain documentation only.
-
-The updated changelog includes 15 releases and 83 notes per language. Previous application and repository ZIPs are preserved. The 3.2 public repository archive is Questio-3.2-GitHub-ready.zip. No remote publication or GitHub-hosted workflow execution was performed.
-
-This remains **Beta**. FC 27 quest progress, badge counts and credited hours remain unresolved/unverified; local timers are not Discord progress. Separate Early Access role IDs and preview links remain unconfigured. Membership verification needs internet access; role changes apply when checked, with a cached grant lasting at most two minutes.
-
-No bot/backend or automatic joining is included. The permanent invite is https://discord.gg/ERzQaHgPeV. OAuth guilds.join consent alone does not add a member; Add Guild Member also needs the same application's bot token: https://docs.discord.com/developers/resources/guild#add-guild-member . A bot token is not distributed with the EXE.
-
-The binary is unsigned and not obfuscated. Local membership checks and locks cannot prevent copying or patching. Updates are manual; voluntary PayPal support does not assign roles automatically.
-
-## Česky
-
-Questio 3.2 prošlo 289 kontrolami. Dodané role jsou nastaveny; vlastníci a vývojáři mají místní Správu projektu s vlastní frází. Běžní členové a podporovatelé správu neodemknou. Odebrání oprávnění zjištěné při kontrole panel zamkne, původní zámek potvrzeného vlastníka zůstává kompatibilní. Živé přidělení rolí na Discordu ani další počítač zatím nebyly ověřeny. Zdroj zůstává soukromý, žádné společné heslo nebo token bota není přibaleno. Automatické připojení, FC 27 a odznaky tímto vydáním opraveny nejsou.
+Official data sources: [Steam player statistics](https://partner.steamgames.com/doc/webapi/ISteamUserStats), [Steam owned games](https://partner.steamgames.com/doc/webapi/IPlayerService), [Steam Community data](https://partner.steamgames.com/documentation/community_data), [Epic achievements](https://dev.epicgames.com/docs/epic-online-services/player-and-game-data/achievements-interface), [Legendary export format](https://github.com/legendary-gl/legendary), [Windows Restart Manager](https://learn.microsoft.com/en-us/windows/win32/api/restartmanager/nf-restartmanager-rmshutdown).

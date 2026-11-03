@@ -1,13 +1,14 @@
 {
-  "version": "3.2.0",
+  "version": "4.0.0",
   "channel": "beta",
-  "artifact": "Questio-3.2-Beta-Windows.zip",
-  "sha256": "E532D355F10281E39B2C0F7560E222547A2A09E6E002DA8FE3970B453D6A0402",
-  "exe_sha256": "C1DD62A8020BEC824DBA39B389E06D965FEE8F6A3E3090C3D0256A9BB2E15FE9",
+  "artifact": "Questio-4.0-Beta-Windows.zip",
+  "sha256": "07D07CF7B03A2C61983DF6EC069A4EFC4F53CE60352D9D91EE44590C4F5A28BC",
+  "exe_sha256": "EA8A4105717090B18B2A1C9417CB2860714E9716D5EE0E01770EF06AB1D5EAC0",
   "source_included": false,
   "auto_join": false,
   "reward_credit_verified": false,
-  "local_checks": 289,
+  "local_checks": 600,
   "discord_invite": "https://discord.gg/ERzQaHgPeV",
-  "support_url": "https://paypal.me/NouneNunu"
+  "support_url": "https://paypal.me/NouneNunu",
+  "last_updated_utc": "2026-11-03 20:52 UTC"
 }
